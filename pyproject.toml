@@ -10,6 +10,7 @@ python = "^3.10"
 mypy = "^1.8.0"
 pytest = "^8.0.0"
 notebook = "^7.0.7"
+black = {extras = ["jupyter"], version = "^24.1.1"}
 
 
 [build-system]
