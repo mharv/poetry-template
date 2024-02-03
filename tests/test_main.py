@@ -5,7 +5,7 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 
-from main import alter, get_n_numbers, multiply_array
+from utils.functions import alter, get_n_numbers, multiply_array
 
 
 def test_alter():
