@@ -1,8 +1,8 @@
-from utils.functions import get_n_numbers
+from utils import functions
 
 
 def main() -> None:
-    print(get_n_numbers(5))
+    print(functions.get_n_numbers(5))
 
 
 if __name__ == "__main__":
