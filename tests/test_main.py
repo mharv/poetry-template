@@ -5,7 +5,7 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 
-from main import alter, get_n_numbers
+from main import alter, get_n_numbers, multiply_array
 
 
 def test_alter():
@@ -21,3 +21,9 @@ def test_get_n_numbers():
     assert get_n_numbers(i) == [1, 2, 3, 4, 5]
     assert type(get_n_numbers(i)) == list
     assert len(get_n_numbers(i)) == i
+
+
+def test_multiply_array():
+    i1 = [1, 2, 3]
+    i2 = 2
+    assert multiply_array(i1, i2) == [2, 4, 6]

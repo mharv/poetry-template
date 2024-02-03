@@ -4,6 +4,7 @@
 # Ignore Poetry cache and virtual environment files
 /.pytest_cache/
 /.mypy_cache/
+*/__pycache__/
 /__pycache__/
 poetry.lock
 
@@ -12,3 +13,7 @@ poetry.lock
 
 # Ignore IDE and editor specific files
 .vscode/
+
+# add ignores for jupyter notebooks
+*.ipynb_checkpoints/
+ 
