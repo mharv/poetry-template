@@ -1,0 +1,14 @@
+# Ignore virtual environment
+/.venv/
+
+# Ignore Poetry cache and virtual environment files
+/.pytest_cache/
+/.mypy_cache/
+/__pycache__/
+poetry.lock
+
+# Ignore local development environment files
+.env
+
+# Ignore IDE and editor specific files
+.vscode/
