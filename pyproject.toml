@@ -10,12 +10,15 @@ python = "^3.10"
 mypy = "^1.8.0"
 pytest = "^8.0.0"
 notebook = "^7.0.7"
-black = {extras = ["jupyter"], version = "^24.1.1"}
+black = { extras = ["jupyter"], version = "^24.1.1" }
 
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
-[tool.poetry.scripts]
-program = "mypy main.py"
+# [tool.poetry.scripts]
+# format = "black ."
+# type-check = "mypy ."
+# test = "pytest"
+# run-main = "python main.py"
