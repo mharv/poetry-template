@@ -44,6 +44,10 @@ def main() -> None:
 
     print(final_df.head())
 
+    print(final_df.count())
+    # print count of missing values present in each column
+    print(final_df.isnull().sum())
+
 
 if __name__ == "__main__":
     main()
