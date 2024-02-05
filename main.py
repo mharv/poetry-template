@@ -26,11 +26,23 @@ def main() -> None:
     ]
 
     processed_dfs = list(map(lambda x: dataframes.keep_columns(x, cols), get_files()))
+    # concat all the dataframes
+    final_df = pd.concat(processed_dfs)
 
-    print(processed_dfs[0].head())
-    print(processed_dfs[1].head())
-    print(processed_dfs[2].head())
-    print(processed_dfs[3].head())
+    final_df["Rent/SF/Yr(£)"] = final_df["Rent/SF/Yr"].apply(
+        lambda x: x.replace("£", "")
+    )
+    final_df.drop("Rent/SF/Yr", axis=1, inplace=True)
+
+    final_df["Rent/SF/Yr(£)min"] = final_df["Rent/SF/Yr(£)"].apply(
+        lambda x: x.split("-")[0].strip()
+    )
+    final_df["Rent/SF/Yr(£)max"] = final_df["Rent/SF/Yr(£)"].apply(
+        lambda x: x.split("-")[1].strip() if "-" in x else x
+    )
+    final_df.drop("Rent/SF/Yr(£)", axis=1, inplace=True)
+
+    print(final_df.head())
 
 
 if __name__ == "__main__":
