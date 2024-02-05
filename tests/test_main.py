@@ -1,11 +1,19 @@
 import sys
 import os
+import pandas as pd
 
 # Add the root directory of the project to the Python path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 
-from utils import functions
+from utils import functions, files
+
+
+def test_read_excel_file():
+    i = "./data/Export 1.xlsx"
+    o = files.read_excel_file(i)
+    assert type(o) == pd.DataFrame
+    assert len(o.head()) == 5
 
 
 def test_alter():

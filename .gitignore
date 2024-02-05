@@ -17,3 +17,5 @@ poetry.lock
 # add ignores for jupyter notebooks
 *.ipynb_checkpoints/
  
+# ignore any file in data folder
+/data/
